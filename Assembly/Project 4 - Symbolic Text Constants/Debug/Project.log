@@ -1,0 +1,15 @@
+﻿Build started 9/24/2015 7:44:04 PM.
+     1>Project "C:\Users\jorda\Documents\Visual Studio 2015\Projects\Assembly Language Projects\Project 4 - Symbolic Text Constants\Project.vcxproj" on node 2 (Build target(s)).
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets(392,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (Project 1 - Subtracting.vcxproj, Project.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+     1>_MASM:
+         Assembling Symbolic Text Constants.asm...
+         cmd.exe /C "C:\Users\jorda\AppData\Local\Temp\tmp0de997cfe2c344c4b8b2f6236797cd05.cmd"
+         ml.exe /c /nologo /Sg /Zi /Fo"Debug\Symbolic Text Constants.obj" /Fl"Project 4 - Symbolic Text Constants.lst" /I "c:\Irvine" /W3 /errorReport:prompt  /Ta"Symbolic Text Constants.asm"
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\jorda\Documents\Visual Studio 2015\Projects\Assembly Language Projects\Project 4 - Symbolic Text Constants\Debug\Project 4 - Symbolic Text Constants.exe" /NOLOGO /LIBPATH:c:\Irvine user32.lib irvine32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:"C:\Users\jorda\Documents\Visual Studio 2015\Projects\Assembly Language Projects\Project 4 - Symbolic Text Constants\Debug\Project 4 - Symbolic Text Constants.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE:NO /IMPLIB:"C:\Users\jorda\Documents\Visual Studio 2015\Projects\Assembly Language Projects\Project 4 - Symbolic Text Constants\Debug\Project 4 - Symbolic Text Constants.lib" /MACHINE:X86 /SAFESEH:NO "Debug\Symbolic Text Constants.obj"
+         Project.vcxproj -> C:\Users\jorda\Documents\Visual Studio 2015\Projects\Assembly Language Projects\Project 4 - Symbolic Text Constants\Debug\Project 4 - Symbolic Text Constants.exe
+     1>Done Building Project "C:\Users\jorda\Documents\Visual Studio 2015\Projects\Assembly Language Projects\Project 4 - Symbolic Text Constants\Project.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:00.81
