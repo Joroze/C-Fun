@@ -1,0 +1,14 @@
+Game: TIC-TAC-TOE - Jordan Rosenberg - (5/25/15) v.1.6
+
+[If you want to restore this configuration file to default
+settings, all you have to do is delete the configuration file,
+run the program, and it will generate a fresh new copy for you.]
+
+You may edit either Player Name here.
+NOTE: Names are limited to 1 character ONLY.
+----------------------------------------------------------------
+
+
+
+Player 1 = X
+Player 2 = O
