@@ -1,2 +1,2 @@
 # Procedural/OOP Fun
-This repository is used to archive some procedural/object-oriented programming related programs that I have created in the past.
+This repository is used to archive various programming assignments that I have created in the past.
