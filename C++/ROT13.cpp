@@ -13,49 +13,49 @@ void convertStringtoROT13(char * pString);
 
 int main() {
 	
-	// Pointer to an array of characters
-	char strInput[100];
+    // Pointer to an array of characters
+    char strInput[100];
 	
-	// The input choice asking if the user should break the do-while loop
-	char inputChoice;
+    // The input choice asking if the user should break the do-while loop
+    char inputChoice;
 	
-	// do-while loop runs the loop at least once before checking to break!
-	do {
+    // do-while loop runs the loop at least once before checking to break!
+    do {
 		
-    cout << "Please input a sentence (letters/spaces only): ";
+        cout << "Please input a sentence (letters/spaces only): ";
     
-    // Gets a line of characters from console and stores it into an character array of size 100
-    cin.getline(strInput, 100);
+        // Gets a line of characters from console and stores it into an character array of size 100
+        cin.getline(strInput, 100);
     
-    // void function that manipulates the entered character array (string) and converts to ROT13
-    convertStringtoROT13(strInput);
+        // void function that manipulates the entered character array (string) and converts to ROT13
+        convertStringtoROT13(strInput);
     
-    // Displays the ROT13 converted array of characters (C++11)
-    cout<<strInput;
+        // Displays the ROT13 converted array of characters (C++11)
+        cout<<strInput;
     
-    cout<<"\nWould you like to try again? Input \'0\' to QUIT";
-    cin>>inputChoice;
+        cout<<"\nWould you like to try again? Input \'0\' to QUIT";
+        cin>>inputChoice;
     
-    // Without this, the cin.getline and cin statements will not work correctly!
-    cin.ignore();
+        // Without this, the cin.getline and cin statements will not work correctly!
+        cin.ignore();
     
-	} while(inputChoice != '0'); // Keep looping unless inputChoice is '0'
+    } while(inputChoice != '0'); // Keep looping unless inputChoice is '0'
     
     return 0;
 }
 
-// Uses ASCII Table for Decimal to ASCII Char conversion
+// I used the ASCII Table for Decimal to ASCII Char conversion
 // http://www.asciitable.com/ for reference
 void convertStringtoROT13(char * pString)
 {
-	int wrappingIndex; 
+    int wrappingIndex; 
 	
-	// The # for any letter to be shifted
-	int letterShift = 13; 
-	int letterStartIndex;
-	int difference;
+    // The # for any letter to be shifted
+    int letterShift = 13; 
+    int letterStartIndex;
+    int difference;
 	
-	// for loop to loop through the array of characters
+    // for loop to loop through the array of characters
     for (int i = 0; i < 100; i++)
     {
     	
@@ -77,13 +77,12 @@ void convertStringtoROT13(char * pString)
     	else if (pString[i] != ' ')
     		return;
     		
-    	difference = pString[i] + letterShift - wrappingIndex;
+    	difference = pString[i] + letterShift - wrappingIndex;  
 		
-		// casting is like smart converting objects from one data type to another   
-		
-		// recircle back to the A/a letter and add the difference
+	// recircle back to the A/a letter and add the difference
     	if (difference >= 0)
     	{
+		// casting is basically telling the compiler to convert the data type from int to char
     		pString[i] = static_cast<char>(letterStartIndex + difference);
     	}
     	
