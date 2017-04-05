@@ -2,15 +2,23 @@
 # Author: Jordan Rosenberg
 # 3/27/2017
 # --------------------------------------
+
+# Function: hlbackwards
+# Description: Takes a list as input, and returns a list in which the elements of the toplevel list are in reverse order
 def hlbackwards(nList):
   if len(nList) == 0:
     return nList
   else:
     return nList[::-1]
 # --------------------------------------
+
+# Function: is_list
+# Description: Returns a boolean depending on if the input is a list or not
 def is_list(p):
   return isinstance(p, list)
 
+# Function: llbackwards
+# Description: Takes a list as input, and returns a list in which every list and sublist is in reverse order. 
 def llbackwards(nList):
   rList = []
   for sublist in nList:
@@ -21,6 +29,11 @@ def llbackwards(nList):
   rList.reverse()
   return rList
 # --------------------------------------
+
+# Function: palindrome
+# Description: Takes a list as input and returns the list if the list is a palindrome, 
+# ie reads the same in both directions, and otherwise returns the original list made into a 
+# palindrome by reversing it and appending it to itself, but not replicating the last element.  
 def palindrome(nList):
   rList = nList[:] # creates new copy of nList and assigns to rList
   rList = llbackwards(rList)[:] # reverses rList
@@ -32,6 +45,9 @@ def palindrome(nList):
     nList.append(rList)
     return nList
 # --------------------------------------
+
+# Function: permutations
+# Description: Takes a list as input and generates a list containing all possible permutations of the list elements
 def permutations(nList):
   from itertools import permutations # (useful permutations library)
   pList = []
@@ -39,16 +55,26 @@ def permutations(nList):
       pList.append([perm])
   return pList
 # --------------------------------------
+
+# Function: ionah (Tower of Hanoi solution)
+# Description: Take single number as input and prints out the solution to the inverted disk problem for that many disks. 
+# This is the problem of moving a stack of k disks of increasing size from bottom to top, from the first peg to the third peg with 
+# another peg that may be used as well, subject to the condition that a smaller disk is never put on top of a larger one, 
+# and only one disk may be moved at a time
+
 # Main function that calls the helper (recHanoi)
 def ionah(n):
   recHanoi(n,3,1,2)  
-  
+ 
 def recHanoi(n, to, From, u):
     if (n > 0):
         recHanoi(n-1, u, From, to)
         print("Move disk from peg '{}' to peg '{}'".format(From, to))
         recHanoi(n-1, to, u, From)
 # --------------------------------------
+
+# Function: sequence
+# Description: Main function that takes a single integer as input and prints out a list containing that many terms of the sequence defined by...
 def sequence(n): # Main function
   sList = []
   if (n == 2):
@@ -58,8 +84,9 @@ def sequence(n): # Main function
     r = [seqDef(n)]
     sList = sequence(n - 1) + r
   return sList
-  
-# Helper function that defines the sequence...
+
+# Function: seqDef
+# Description: Helper function that defines the sequence...
 def seqDef(n):
     if (n == 1):
         return 0
@@ -69,6 +96,10 @@ def seqDef(n):
         r = 2 * seqDef(n - 1) + seqDef(n - 2)
         return r
 # --------------------------------------
+
+# Function: argue
+# Description: A program that argues with the user, accepts a list as input
+# Example input: >>> argue(['you','are','a','stupid','computer'])
 def argue(nList):
   for i in range(0, len(nList)):
     if nList[i] == 'you':
@@ -95,6 +126,9 @@ def argue(nList):
       nList[i] = 'does'
   return nList
 # --------------------------------------
+
+# Function: bubblesort
+# Description: Takes a list of numbers as input and returns the list sorted in ascending order using a bubblesort. 
 def bubblesort(nList):
   temp = []
   for i in range(len(nList) - 1, 0 , - 1):
